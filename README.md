@@ -97,5 +97,5 @@ think it's probably just easier to maintain 100 lines or so of shell.
 ## Contributing
 
 Reasonable pull requests are welcomed. Please don't try to add
-pacman wrappeng. Any changes you make should be run through 
+pacman wrapping. Any changes you make should be run through 
 `shellcheck` before submission.
