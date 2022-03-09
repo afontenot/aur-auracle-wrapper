@@ -66,35 +66,33 @@ Why not just use one of the big complicated AUR helpers instead? You
 can! I personally have not found one that I really like. To mention
 only the ones on the Wiki that have diff viewing:
 
-    * rua: as with many -nodejs- rust applications, uses an unholy
-    number of dependencies. Also, the amount of prompting (with no
-    default options available) is unreasonable. Printing the diff by
-    default is reasonable behavior. Accepting the changes after the
-    diff has been viewed is also. rua does neither.
+ * rua: as with many ~~nodejs~~ Rust applications, uses an unholy
+ number of dependencies. Also, the amount of prompting (with no
+ default options available) is unreasonable. Printing the diff by
+ default is reasonable behavior. Accepting the changes after the
+ diff has been viewed is also. rua does neither.
 
-    * aurutils: I don't really like the model of having my own local
-    repository, so this isn't for me. I haven't looked at it in much
-    detail beyond that.
+ * aurutils: I don't really like the model of having my own local
+ repository, so this isn't for me. I haven't looked at it in much
+ detail beyond that.
 
-    * yay: I used to use this, but diff view has been broken for
-    years now with no fix in sight. Specifically, the diffs for each
-    changed file are printed individually, so if each one fits on
-    your screen, you don't get a pager. This makes it very hard to
-    review diffs.
+ * yay: I used to use this, but diff view has been broken for years
+ now with no fix in sight. Specifically, the diffs for each changed
+ file are printed individually, so if each one fits on your screen,
+ you don't get a pager. This makes it very hard to review diffs.
 
 A few that I haven't looked at in much detail yet:
 
-    * paru: Rust, so also an absurd number of dependencies. I don't
-    really need or want a pacman wrapper. Playing around with it for
-    a while, I found the interface rather unintuitive.
+ * paru: Rust, so also an absurd number of dependencies. I don't
+ really need or want a pacman wrapper. Playing around with it for a
+ while, I found the interface rather unintuitive.
 
-    * pacaur: a slightly more complicated shell wrapper around
-    auracle. Given that my needs are rather simple and I don't need
-    a pacman wrapper at all, I didn't look at this one more closely.
+ * pacaur: a slightly more complicated shell wrapper around auracle.
+ Given that my needs are rather simple and I don't need a pacman
+ wrapper at all, I didn't look at this one more closely.
 
 There are others, but honestly since my needs are pretty simple, I
-think it's probably just easier to maintain 100 lines or so of
-shell.
+think it's probably just easier to maintain 100 lines or so of shell.
 
 ## Contributing
 
