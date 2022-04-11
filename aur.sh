@@ -32,7 +32,7 @@ aur () {
         else
             aurupdate=("$(auracle --quiet outdated)")
             if [[ ${#aurupdate[@]} -gt 0 ]]; then
-                printf "Updating the following: %s\n" "${aurupdate[*]}"
+                printf "Updating the following:\n%s\n" "${aurupdate[*]}"
                 printf "Would you like to proceed [Y/n]? "
                 read -r response
                 if [[ $response == [nN] ]]; then
@@ -41,7 +41,8 @@ aur () {
             fi
         fi
         pretobuild=()
-        for pkg in "${aurupdate[@]}"; do
+        for pkg in $(echo $aurupdate | tr '\n' ' '); do
+            echo "$pkg"
             cd "$pkg"
             git fetch
             pkgchanges=$(git diff --color HEAD origin)
@@ -62,7 +63,7 @@ aur () {
             else
                 printf "%s: no changes on remote; build anyway [Y/n]? " "$pkg"
                 read -r response
-                if [[ $response == [nN ]]; then
+                if [[ $response == [nN] ]]; then
                     continue
                 else
                     pretobuild+=("$pkg")
